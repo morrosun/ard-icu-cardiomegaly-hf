@@ -1,0 +1,30 @@
+id	report_text	expected_exposed	expected_grade	property_tested
+01	FINDINGS: The heart is enlarged.\nIMPRESSION: Cardiomegaly.	1	unspec	Positive statement in the impression
+02	FINDINGS: Mild cardiomegaly.\nNo pulmonary oedema.	1	mild	Pre-modifier attached to the term
+03	FINDINGS: Moderate to severe cardiomegaly.	1	mod_sev	Range expression takes the higher grade
+04	FINDINGS: Severe cardiomegaly with small bilateral pleural effusions.	1	mod_sev	'Severe' mapped to moderate-to-severe
+05	FINDINGS: No interval change in moderate cardiomegaly.	1	mod_sev	Persistence phrase is not a negation
+06	FINDINGS: Cardiomegaly, unchanged from the prior study.	1	unspec	Unchanged finding remains positive
+07	FINDINGS: Mild cardiomegaly with severe pulmonary oedema.	1	mild	Descriptor of another abnormality not transferred
+08	FINDINGS: Heart size within normal limits.\nIMPRESSION: Cardiomegaly is moderate.	1	mod_sev	Post-modifier construction
+09	FINDINGS: Moderate cardiomegaly.\nIMPRESSION: Mild cardiomegaly.	1	mod_sev	Highest grade across positive sentences retained
+10	FINDINGS: Cardiomegaly has resolved.	0	none	Post-term resolution phrase negates
+11	FINDINGS: No cardiomegaly.	0	none	Simple negation
+12	FINDINGS: The heart size is normal.\nNo evidence of cardiomegaly.	0	none	Negation with a multi-word cue
+13	INDICATION: Rule out cardiomegaly.\nFINDINGS: Heart size normal.\nIMPRESSION: No cardiomegaly.	0	none	Indication mention plus negated findings
+14	INDICATION: Evaluate for cardiomegaly.\nFINDINGS: Mild cardiomegaly.	1	mild	Indication dropped, findings retained
+15	HISTORY: Cardiomegaly.\nFINDINGS: Stable heart size.\nIMPRESSION: No cardiomegaly.	0	none	History mention discarded
+16	EXAMINATION: CHEST\nHISTORY: Cardiomegaly.	0	none	History-only mention; no findings or impression section
+17	FINDINGS: Cannot exclude cardiomegaly.	1	unspec	Uncertainty is a possibility, not a negation
+18	FINDINGS: No significant change in cardiomegaly.	1	unspec	Persistence phrase carrying a qualifier
+19	FINDINGS: Cardiomegaly, marked.	1	mod_sev	'Marked' mapped to moderate-to-severe
+20	FINDINGS: Massive cardiomegaly.	1	mod_sev	'Massive' mapped to moderate-to-severe
+21	FINDINGS: Moderate/severe cardiomegaly.	1	mod_sev	Slash range connector, higher grade retained
+22	FINDINGS: Severe/mild cardiomegaly.	1	mod_sev	Slash range connector with reversed order
+23	FINDINGS: Mild-to-moderate cardiomegaly.	1	mod_sev	Ascending hyphenated expression; final grade word yields the expected category
+24	FINDINGS: Enlarged cardiac shadow. This may reflect cardiomegaly or a pericardial effusion.\nIMPRESSION: Enlarged cardiac shadow.	1	unspec	Possibility qualifier on the only mention; still counted
+25	FINDINGS: No new cardiomegaly.	0	none	'No new' negates
+26	FINDINGS: Previously noted cardiomegaly, no longer present.	0	none	Post-term 'no longer present' negates
+27	FINDINGS: Borderline cardiomegaly.	1	unspec	Unlisted qualifier leaves grade unspecified
+28	FINDINGS: Enlarged cardiac silhouette.	0	none	No synonym expansion
+29	FINDINGS: The cardiac silhouette is at the upper limit of normal.\nIMPRESSION: No cardiomegaly.	0	none	Hedged normal description

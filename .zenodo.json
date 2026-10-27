@@ -1,0 +1,38 @@
+{
+  "title": "Report-processing code for a study of cardiomegaly on early ICU chest radiographs and in-hospital heart-failure diagnoses in critically ill patients with autoimmune rheumatic diseases",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "version": "1.0.0",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Wang, Qi",
+      "affiliation": "Department of Radiology, Huai'an Traditional Chinese Medicine Hospital, Huai'an, China"
+    },
+    {
+      "name": "Wang, Kai",
+      "affiliation": "Department of Rheumatology and Immunology, The Affiliated Huai'an No.1 People's Hospital of Nanjing Medical University, Huai'an, China",
+      "orcid": "0000-0002-0511-8038"
+    }
+  ],
+  "description": "<p>Frozen rule set, examination-type classifier and synthetic test suite used to extract cardiomegaly from the free-text radiology reports of MIMIC-IV-Note, as described in the accompanying manuscript.</p><p>The package contains: the frozen text rule (section-aware parsing, a 40-character preceding negation window, a 45-character following resolution window, persistence-phrase removal before the negation search, and severity aggregated to the highest grade in a report); the examination-type classifier that identifies the examination line printed at the head of a report and vetoes non-chest body sites; the 29 hand-written probe reports of Supplementary Table S3 with the label and grade each is expected to return; a driver that applies the rule and reports agreement on label and grade separately; and a blank copy of the form used in the label-blinded review.</p><p>Everything runs on Python 3 with the standard library only. No patient data are included and no file requires access to MIMIC-IV: the frozen rules and the synthetic probes reproduce the reported agreement of 1,252/1,252 reports on exposure classification and 240/240 on grade without any credential.</p>",
+  "keywords": [
+    "cardiomegaly",
+    "heart failure",
+    "autoimmune rheumatic disease",
+    "MIMIC-IV",
+    "radiology reports",
+    "rule-based text extraction",
+    "reproducibility",
+    "critical care"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/morrosun/ard-icu-cardiomegaly-hf",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "This archive corresponds to tag v1.0.0 of https://github.com/morrosun/ard-icu-cardiomegaly-hf and to Supplementary Code S1 of the manuscript."
+}
